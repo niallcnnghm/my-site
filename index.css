@@ -1,7 +1,7 @@
 @font-face {
-    font-family: W95;
-    src: url(/fonts/w95f.woff);
-    src: url(/fonts/w95f.woff2);
+    font-family: "W95";
+    src: url("./fonts/w95f.woff2") format("woff2"),
+         url("./fonts/w95f.woff") format("woff");
 }
 
 body {
