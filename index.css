@@ -1,0 +1,150 @@
+@font-face {
+    font-family: W95;
+    src: url(/fonts/w95f.woff);
+    src: url(/fonts/w95f.woff2);
+}
+
+body {
+    margin: 0;
+    font-family: "W95", Arial, sans-serif;
+    background: #008080;
+    overflow-x: hidden;
+    position: relative;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+.window {
+    position: absolute;
+    background: #c0c0c0;
+    border: 2px solid #fff;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    box-shadow: inset -1px -1px #808080, inset 1px 1px #fff;
+    margin: 0;
+    max-width: 500px;
+}
+
+.window:active,
+.window:focus-within {
+    outline: 1px dotted #000;
+}
+
+.title-bar {
+    background: #000080;
+    color: white;
+    padding: 4px;
+    font-weight: bold;
+    cursor: move;
+    user-select: none;
+}
+
+.window-content {
+    padding: 10px;
+    background: white;
+}
+
+.window__menu {
+    padding-left: 4px;
+}
+
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: #c0c0c0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #fff;
+    z-index: 3;
+}
+
+.start-btn {
+    margin-left: 5px;
+    padding: 5px 10px;
+    background: #c0c0c0;
+    border: 2px solid #fff;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    cursor: pointer;
+    font-family: 'W95'
+}
+
+.start-menu {
+    position: fixed;
+    bottom: 40px;
+    left: 5px;
+    width: 350px;
+    background: #c0c0c0;
+    border: 2px solid white;
+    border-right-color: black;
+    border-bottom-color: black;
+    display: none;
+    padding: 0px 10px 0px 0px;
+    flex-direction: row;
+}
+
+.start-menu.open {
+    display: flex;
+}
+
+.start-menu__content {
+    padding-left: 10px
+}
+
+.start-menu__content p {
+    display: flex;
+    flex-direction: column;
+}
+
+.start-menu__side {
+    background: #000080;
+    color: white;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'W95';
+
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.clock {
+    border: 1px solid black;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+    .window {
+        width: 90vw;
+        margin: 0 auto;
+        top: 50px !important;
+        left: 5% !important;
+    }
+
+    .start-menu {
+        position: fixed;
+        display: block !important;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .start-menu__side {
+        display: none;
+    }
+    
+    .taskbar {
+        display: none;
+    }
+}
